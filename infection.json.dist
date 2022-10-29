@@ -9,7 +9,7 @@
     },
     "logs": {
         "stryker": {
-            "badge": "1.0.x"
+            "badge": "1.x.x"
         },
         "text": "infection.log"
     }
