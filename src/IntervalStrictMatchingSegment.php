@@ -16,15 +16,15 @@ final class IntervalStrictMatchingSegment implements Segment
     public const NAME = 'datetime_strict_matching_segment';
     private string $id;
     private IntervalCriteria $criteria;
-    private ClockInterface $clock;
     private StrictMatchingSegment $strictMatchingSegment;
+    private IntervalMatchingSegment $intervalMatchingSegment;
 
     /** @param array<mixed> $criteria */
     public function __construct(string $id, array $criteria, ClockInterface $clock)
     {
         $this->id = $id;
         $this->criteria = IntervalCriteria::fromRawCriteria($criteria);
-        $this->clock = $clock;
+        $this->intervalMatchingSegment = new IntervalMatchingSegment($id, $criteria, $clock);
         $this->strictMatchingSegment = new StrictMatchingSegment($id, $this->criteria->matches());
     }
 
@@ -45,7 +45,7 @@ final class IntervalStrictMatchingSegment implements Segment
 
     public function match(array $payload): bool
     {
-        if (false === $this->criteria->isOnTime($this->clock->now())) {
+        if (false === $this->intervalMatchingSegment->match($payload)) {
             return false;
         }
 
