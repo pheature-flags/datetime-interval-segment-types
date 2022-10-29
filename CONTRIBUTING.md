@@ -2,7 +2,7 @@
 
 Contributions are **welcome** and will be fully **credited**.
 
-We accept contributions via Pull Requests on [GitHub](https://github.com/pheature-flags/datetime-interval-segmnent-types).
+We accept contributions via Pull Requests on [GitHub](https://github.com/pheature-flags/datetime-interval-segment-types).
 
 
 ## Pull Requests
