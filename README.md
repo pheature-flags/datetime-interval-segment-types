@@ -33,7 +33,7 @@ knowledge to the community. For this reason we release all our packages under [B
 [link-code-quality]: https://scrutinizer-ci.com/g/pheature-flags/datetime-interval-segmnent-types/?branch=1.0.x
 [ico-coverage]: https://codecov.io/gh/pheature-flags/datetime-interval-segmnent-types/branch/1.0.x/graph/badge.svg?token=DTQIQUZ106
 [link-coverage]: https://codecov.io/gh/pheature-flags/datetime-interval-segmnent-types
-[ico-mantain]: https://api.codeclimate.com/v1/badges/bfd8ab1bc4664ec724c0/maintainability
+[ico-mantain]: https://api.codeclimate.com/v1/badges/037f266affd939dd99f0/maintainability
 [link-mantain]: https://codeclimate.com/github/pheature-flags/datetime-interval-segmnent-types/maintainability
 [ico-downloads]: https://img.shields.io/packagist/dt/pheature/datetime-interval-segmnent-types.svg?style=flat-square
 [link-downloads]: https://packagist.org/packages/pheature/datetime-interval-segmnent-types
