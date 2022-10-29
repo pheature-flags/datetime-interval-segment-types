@@ -11,11 +11,13 @@ Pheature flags DateTime Interval Based Segment Types
 
 ## Installation
 
-Describe package installation
-
 ```php
 composer require pheature/datetime-interval-segment-types
 ```
+
+## Usage 
+
+See the [official docs page](https://pheatureflags.io/#/packages/datetime-interval-segment-types)
 
 ## Contributing
 
