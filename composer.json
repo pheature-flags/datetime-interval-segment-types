@@ -1,5 +1,5 @@
 {
-    "name": "pheature/datetime-interval-segmnent-types",
+    "name": "pheature/datetime-interval-segment-types",
     "description": "Pheature flags DateTime Interval Based Segment Types.",
     "keywords": ["feature-toggle", "feature-flags"],
     "type": "library",
