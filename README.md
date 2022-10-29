@@ -1,7 +1,6 @@
 # Pheature Flags <br><sub><sup>DateTime Interval Based Segment Types</sup></sub>
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
-[![Quality Score][ico-code-quality]][link-code-quality]
 [![Type coverage][ico-psalm]][link-psalm]
 [![Test Coverage][ico-coverage]][link-coverage]
 [![Mutation testing badge][ico-mutant]][link-mutant]
@@ -29,8 +28,6 @@ knowledge to the community. For this reason we release all our packages under [B
 
 [ico-version]: https://img.shields.io/packagist/v/pheature/datetime-interval-segment-types.svg?style=flat-square
 [link-packagist]: https://packagist.org/packages/pheature/datetime-interval-segment-types
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/pheature-flags/datetime-interval-segment-types.svg?style=flat-square
-[link-code-quality]: https://scrutinizer-ci.com/g/pheature-flags/datetime-interval-segment-types/?branch=1.0.x
 [ico-coverage]: https://codecov.io/gh/pheature-flags/datetime-interval-segment-types/branch/1.0.x/graph/badge.svg?token=DTQIQUZ106
 [link-coverage]: https://codecov.io/gh/pheature-flags/datetime-interval-segment-types
 [ico-mantain]: https://api.codeclimate.com/v1/badges/037f266affd939dd99f0/maintainability
