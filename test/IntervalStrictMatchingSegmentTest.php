@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Pheature\Test\Model\DateTime;
 
+use Beste\Clock\FrozenClock;
 use DateTimeImmutable;
 use DateTimeZone;
 use Generator;
 use InvalidArgumentException;
 use Pheature\Model\DateTime\IntervalStrictMatchingSegment;
 use PHPUnit\Framework\TestCase;
-use StellaMaris\Clock\ClockInterface;
 
 class IntervalStrictMatchingSegmentTest extends TestCase
 {
@@ -22,13 +22,13 @@ class IntervalStrictMatchingSegmentTest extends TestCase
         $this->expectException(InvalidArgumentException::class);
         $this->expectExceptionCode(0);
         $now = new DateTimeImmutable();
-        new IntervalStrictMatchingSegment(self::SEGMENT_ID, $criteria, $this->getClock($now));
+        new IntervalStrictMatchingSegment(self::SEGMENT_ID, $criteria, FrozenClock::at($now));
     }
 
     /** @dataProvider nonMatchingPayloads */
     public function testItShouldNotMatch(DateTimeImmutable $now, array $criteria, array $payload): void
     {
-        $segment = new IntervalStrictMatchingSegment(self::SEGMENT_ID, $criteria, $this->getClock($now));
+        $segment = new IntervalStrictMatchingSegment(self::SEGMENT_ID, $criteria, FrozenClock::at($now));
 
         $this->assertFalse($segment->match($payload));
         $this->assertSame(self::SEGMENT_ID, $segment->id());
@@ -45,7 +45,7 @@ class IntervalStrictMatchingSegmentTest extends TestCase
     /** @dataProvider matchingPayloads */
     public function testItShouldMatch(DateTimeImmutable $now, array $criteria, array $payload): void
     {
-        $segment = new IntervalStrictMatchingSegment(self::SEGMENT_ID, $criteria, $this->getClock($now));
+        $segment = new IntervalStrictMatchingSegment(self::SEGMENT_ID, $criteria, FrozenClock::at($now));
 
         $this->assertTrue($segment->match($payload));
         $this->assertSame(self::SEGMENT_ID, $segment->id());
@@ -56,23 +56,6 @@ class IntervalStrictMatchingSegmentTest extends TestCase
             'type' => 'datetime_strict_matching_segment',
             'criteria' => $criteria,
         ], $segment->jsonSerialize());
-    }
-
-    private function getClock(DateTimeImmutable $now): ClockInterface
-    {
-        return new class($now) implements ClockInterface {
-            private DateTimeImmutable $now;
-
-            public function __construct(DateTimeImmutable $now)
-            {
-                $this->now = $now;
-            }
-
-            public function now(): DateTimeImmutable
-            {
-                return $this->now;
-            }
-        };
     }
 
     public function invalidPayloads(): Generator
@@ -139,6 +122,7 @@ class IntervalStrictMatchingSegmentTest extends TestCase
                 'start_datetime' => '2022-10-28 11:30:00',
                 'end_datetime' => '2022-10-28 11:30:00',
                 'timezone' => 'UTC',
+                'matches' => null
             ]
         ];
     }

@@ -47,8 +47,11 @@ final class IntervalCriteria
         Assert::string($criteria['end_datetime']);
         Assert::keyExists($criteria, 'timezone');
         Assert::string($criteria['timezone']);
-        Assert::keyExists($criteria, 'matches');
-        Assert::isArray($criteria['matches']);
+        $matches = [];
+        if (array_key_exists('matches', $criteria)) {
+            Assert::isArray($criteria['matches']);
+            $matches = $criteria['matches'];
+        }
 
         try {
             $timezone = new DateTimeZone($criteria['timezone']);
@@ -63,7 +66,7 @@ final class IntervalCriteria
         return new self(
             new DateTimeImmutable($criteria['start_datetime'], $timezone),
             new DateTimeImmutable($criteria['end_datetime'], $timezone),
-            $criteria['matches'],
+            $matches,
         );
     }
 

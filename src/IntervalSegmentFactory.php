@@ -20,6 +20,9 @@ class IntervalSegmentFactory implements SegmentFactory
 
     public function create(string $segmentId, string $segmentType, array $criteria): Segment
     {
+        if (IntervalMatchingSegment::NAME === $segmentType) {
+            return new IntervalMatchingSegment($segmentId, $criteria, $this->clock);
+        }
         if (IntervalStrictMatchingSegment::NAME === $segmentType) {
             return new IntervalStrictMatchingSegment($segmentId, $criteria, $this->clock);
         }
@@ -30,7 +33,8 @@ class IntervalSegmentFactory implements SegmentFactory
     public function types(): array
     {
         return [
-            IntervalStrictMatchingSegment::NAME
+            IntervalMatchingSegment::NAME,
+            IntervalStrictMatchingSegment::NAME,
         ];
     }
 }
