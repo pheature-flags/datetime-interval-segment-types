@@ -36,5 +36,5 @@ knowledge to the community. For this reason we release all our packages under [B
 [link-downloads]: https://packagist.org/packages/pheature/datetime-interval-segment-types
 [ico-psalm]: https://shepherd.dev/github/pheature-flags/datetime-interval-segment-types/coverage.svg
 [link-psalm]: https://shepherd.dev/github/pheature-flags/datetime-interval-segment-types
-[ico-mutant]: https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2Fpheature-flags%2Fdatetime-interval-segment-types%2F1.0.x
-[link-mutant]: https://dashboard.stryker-mutator.io/reports/github.com/pheature-flags/datetime-interval-segment-types/1.0.x
+[ico-mutant]: https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2Fpheature-flags%2Fdatetime-interval-segment-types%2F1.x.x
+[link-mutant]: https://dashboard.stryker-mutator.io/reports/github.com/pheature-flags/datetime-interval-segment-types/1.x.x
