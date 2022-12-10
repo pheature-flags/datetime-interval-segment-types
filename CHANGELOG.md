@@ -1,6 +1,14 @@
 # Changelog
 
-## [0.6.0](https://github.com/pheature-flags/datetime-interval-segment-types/tree/0.6.0)
+## [0.7.0](https://github.com/pheature-flags/datetime-interval-segment-types/tree/0.7.0)
+
+[Full Changelog](https://github.com/pheature-flags/datetime-interval-segment-types/compare/0.6.0...0.7.0)
+
+**Merged pull requests:**
+
+- \[\#359\] Add PHP 8.2 support [\#9](https://github.com/pheature-flags/datetime-interval-segment-types/pull/9) (@kpicaza)
+
+## [0.6.0](https://github.com/pheature-flags/datetime-interval-segment-types/tree/0.6.0) (2022-10-29)
 
 [Full Changelog](https://github.com/pheature-flags/datetime-interval-segment-types/compare/3eb4d7813b97aa196b3272cfdd255ad84d72e987...0.6.0)
 
