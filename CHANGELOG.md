@@ -1,6 +1,14 @@
 # Changelog
 
-## [0.7.0](https://github.com/pheature-flags/datetime-interval-segment-types/tree/0.7.0)
+## [0.7.1](https://github.com/pheature-flags/datetime-interval-segment-types/tree/0.7.1)
+
+[Full Changelog](https://github.com/pheature-flags/datetime-interval-segment-types/compare/0.7.0...0.7.1)
+
+**Fixed bugs:**
+
+- \[symfony-toggle\#44\] update dependency constraints to ^0.7 [\#11](https://github.com/pheature-flags/datetime-interval-segment-types/pull/11) (@kpicaza)
+
+## [0.7.0](https://github.com/pheature-flags/datetime-interval-segment-types/tree/0.7.0) (2022-12-10)
 
 [Full Changelog](https://github.com/pheature-flags/datetime-interval-segment-types/compare/0.6.0...0.7.0)
 
