@@ -6,7 +6,7 @@ namespace Pheature\Model\DateTime;
 
 use Pheature\Core\Toggle\Read\Segment;
 use Pheature\Model\Toggle\StrictMatchingSegment;
-use StellaMaris\Clock\ClockInterface;
+use Psr\Clock\ClockInterface;
 
 /**
  * @psalm-import-type Criteria from IntervalCriteria

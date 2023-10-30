@@ -7,7 +7,7 @@ namespace Pheature\Model\DateTime;
 use Pheature\Core\Toggle\Exception\InvalidSegmentTypeGiven;
 use Pheature\Core\Toggle\Read\Segment;
 use Pheature\Core\Toggle\Read\SegmentFactory;
-use StellaMaris\Clock\ClockInterface;
+use Psr\Clock\ClockInterface;
 
 class IntervalSegmentFactory implements SegmentFactory
 {
