@@ -3,7 +3,7 @@
 namespace Pheature\Model\DateTime;
 
 use Pheature\Core\Toggle\Read\Segment;
-use StellaMaris\Clock\ClockInterface;
+use Psr\Clock\ClockInterface;
 
 class IntervalMatchingSegment implements Segment
 {
