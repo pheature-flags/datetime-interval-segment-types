@@ -1,6 +1,20 @@
 # Changelog
 
-## [0.7.1](https://github.com/pheature-flags/datetime-interval-segment-types/tree/0.7.1)
+## [0.8.0](https://github.com/pheature-flags/datetime-interval-segment-types/tree/0.8.0)
+
+[Full Changelog](https://github.com/pheature-flags/datetime-interval-segment-types/compare/0.7.1...0.8.0)
+
+**Implemented enhancements:**
+
+- Use PSR 20 Clock interface [\#14](https://github.com/pheature-flags/datetime-interval-segment-types/issues/14)
+
+**Merged pull requests:**
+
+- \[\#14\] Use PSR-20 Clock interface [\#15](https://github.com/pheature-flags/datetime-interval-segment-types/pull/15) (@kpicaza)
+- fix: PHP version constraints in composer json [\#12](https://github.com/pheature-flags/datetime-interval-segment-types/pull/12) (@kpicaza)
+- Update vimeo/psalm requirement from ^4.4 to ^4.4 || ^5.0 [\#8](https://github.com/pheature-flags/datetime-interval-segment-types/pull/8) (@dependabot[bot])
+
+## [0.7.1](https://github.com/pheature-flags/datetime-interval-segment-types/tree/0.7.1) (2022-12-12)
 
 [Full Changelog](https://github.com/pheature-flags/datetime-interval-segment-types/compare/0.7.0...0.7.1)
 
