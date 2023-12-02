@@ -47,6 +47,7 @@ final class IntervalCriteria
         Assert::string($criteria['end_datetime']);
         Assert::keyExists($criteria, 'timezone');
         Assert::string($criteria['timezone']);
+        Assert::minLength($criteria['timezone'], 2);
         $matches = [];
         if (array_key_exists('matches', $criteria)) {
             Assert::isArray($criteria['matches']);
@@ -54,7 +55,9 @@ final class IntervalCriteria
         }
 
         try {
-            $timezone = new DateTimeZone($criteria['timezone']);
+            /** @var non-empty-string $rawTimezone */
+            $rawTimezone = $criteria['timezone'];
+            $timezone = new DateTimeZone($rawTimezone);
         } catch (\Exception $exception) {
             throw new InvalidArgumentException(
                 sprintf('Invalid timezone "%s" given.', $criteria['timezone']),
